@@ -15,10 +15,10 @@ corruptPath = "./Corrupt"
 
 csvFileName = "status.csv"
 
-""" folderPath = "F:/"
-validPath = "E:/New folder/rec/Valid"
-corruptPath = "E:/New folder/rec/Corrupt"
- """
+""" folderPath = "F:/Install 2011"
+validPath = "F:/Install 2011/Valid"
+corruptPath = "F:/Install 2011/Corrupt" """
+
 fileEndings = ["jpg", "png"]
 
 
@@ -40,7 +40,6 @@ rw = "w"
 if os.path.exists(csvFileName):
     rw = "a"
 
-print(rw)
 fileCount = len([f for f in os.listdir(folderPath)
                 if os.path.isfile(os.path.join(folderPath, f))])
 progress = fileCount
