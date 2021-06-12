@@ -17,12 +17,15 @@ csvFileName = "status.csv"
 
 """ folderPath = "F:/"
 validPath = "E:/New folder/rec/Valid"
-corruptPath = "E:/New folder/rec/Corrupt" """
-
+corruptPath = "E:/New folder/rec/Corrupt"
+ """
 fileEndings = ["jpg", "png"]
 
 
 def Move(path, filename, destPath, successArray):
+
+    if os.path.exists(destPath)  == False:
+        os.mkdir(destPath)
     try:
         shutil.move((path + "/" + filename), (destPath + "/" + filename))
         successArray[0] += 1
